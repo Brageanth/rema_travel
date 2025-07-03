@@ -1,0 +1,11 @@
+---
+const { dark, title, titleRight } = Astro.props
+---
+<div class="px-[6%]">
+  <div class:list={[title ? "" : "hidden", dark ? "bg-white" : "bg-black text-white", titleRight ? "ml-auto mr-[40px]" : "", "px-[3%] font-black text-2xl py-[1%] rounded-t-[25px] ml-[40px] w-fit"]}>
+    {title}
+  </div>
+  <div class:list={['border-2', dark ? 'border-white' : 'border-black', title ? "rounded-[40px]" : "rounded-[75px]"]}>
+    <slot/>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+---
+const { photo, name, position } = Astro.props
+---
+
+<div class="flex flex-col justify-center items-center">
+<img class="w-[15vw] h-[15vw] object-cover rounded-full bg-white" src={photo} />
+<span class="text-white font-black text-2xl mt-3">{name}</span>
+<span class="text-white font-thin">{position}</span>
+</div>
