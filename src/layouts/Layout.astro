@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
-import 'lenis/dist/lenis.css'
 import Header from '../components/Header.astro';
+import ClientEffects from '../components/ClientEffects.jsx';
 ---
 
 <!doctype html>
@@ -11,11 +11,10 @@ import Header from '../components/Header.astro';
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-    <script type="module" src="/src/scripts/lenis.js" defer></script>
-    <script type="module" src="/src/scripts/gsap.js" defer></script>
 		<title>Rema Travel</title>
 	</head>
 	<body>
+    <ClientEffects client:only="react" />
     <Header />
 		<slot />
 	</body>
