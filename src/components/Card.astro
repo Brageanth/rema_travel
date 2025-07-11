@@ -1,11 +1,25 @@
 ---
-const { dark, title, titleRight } = Astro.props
+const { dark, title, titleRight } = Astro.props;
 ---
+
 <div class="px-[6%]">
-  <div class:list={[title ? "" : "hidden", dark ? "bg-white" : "bg-black text-white", titleRight ? "ml-auto mr-[40px]" : "", "px-[3%] font-black text-2xl py-[1%] rounded-t-[25px] ml-[40px] w-fit"]}>
+  <div
+    class:list={[
+      title ? "" : "hidden",
+      dark ? "bg-white" : "bg-black text-white",
+      titleRight ? "ml-auto mr-[40px]" : "",
+      "lg:px-[3%] px-12 font-black lg:text-2xl py-[1%] rounded-t-[25px] mr-auto ml-auto lg:ml-[20px] w-fit",
+    ]}
+  >
     {title}
   </div>
-  <div class:list={['border-2', dark ? 'border-white' : 'border-black', title ? "rounded-[40px]" : "rounded-[75px]"]}>
-    <slot/>
+  <div
+    class:list={[
+      "border-2",
+      dark ? "border-white" : "border-black",
+      title ? "rounded-[40px]" : "lg:rounded-[75px] rounded-[50px]",
+    ]}
+  >
+    <slot />
   </div>
 </div>

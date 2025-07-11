@@ -1,22 +1,21 @@
 ---
 import "../styles/global.css";
-import Header from '../components/Header.astro';
-import ClientEffects from '../components/ClientEffects.jsx';
+import Header from "../components/Header.astro";
+import ClientEffects from "../components/ClientEffects.jsx";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Rema Travel</title>
-	</head>
-	<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Rema Travel</title>
+  </head>
+  <body>
     <ClientEffects client:only="react" />
     <Header />
-		<slot />
-	</body>
+    <slot />
+  </body>
 </html>
-

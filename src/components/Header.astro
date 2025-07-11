@@ -1,11 +1,21 @@
 <div
-  class="flex justify-between mx-[6%] py-10 items-center border-b-2 text-lg border-black"
+  class="flex mx-6 lg:mx-22 py-10 items-center lg:border-b-2 gap-20 justify-center"
 >
-  <img src={"/logo.png"} class="w-[20%]" />
-  <span class="cursor-pointer" data-header-section>HOME</span>
-  <span class="cursor-pointer" data-header-section>SOBRE NOSOTROS</span>
-  <span class="cursor-pointer" data-header-section>SERVICIOS</span>
-  <span class="cursor-pointer" data-header-section>SOLUCIONES POR OBJETIVO</span
+  <img src={"/logo.png"} class="lg:w-[20%] w-2/5" />
+  <div
+    class="hidden justify-between w-full items-center text-lg border-black lg:flex"
   >
-  <span class="cursor-pointer" data-header-section>CONTACTO</span>
+    <span class="cursor-pointer" data-header-section>HOME</span>
+    <span class="cursor-pointer" data-header-section>SOBRE NOSOTROS</span>
+    <span class="cursor-pointer" data-header-section>SERVICIOS</span>
+    <span class="cursor-pointer" data-header-section
+      >SOLUCIONES POR OBJETIVO</span
+    >
+    <span class="cursor-pointer" data-header-section>CONTACTO</span>
+  </div>
+  <div
+    class="lg:hidden fixed rounded-full bg-black right-6 w-10 h-10 text-white items-center flex justify-center z-10"
+  >
+    a
+  </div>
 </div>

@@ -1,10 +1,11 @@
 ---
 const { label, key, inputType } = Astro.props;
-const styles = "border-gray-400 bg-white rounded-2xl text-lg p-5";
+const styles =
+  "border-gray-400 bg-white lg:rounded-2xl rounded-lg lg:text-lg lg:p-5 p-2";
 ---
 
 <div class="flex flex-col flex-1">
-  <label class="font-light text-lg my-1" for={key}>{label}</label>
+  <label class="font-light lg:text-lg my-1" for={key}>{label}</label>
   {
     inputType !== "textarea" ? (
       <input type={inputType} class={styles} />

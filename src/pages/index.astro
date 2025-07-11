@@ -11,19 +11,21 @@ import SocialMediaIcon from "../components/SocialMediaIcon.astro";
 
 <Layout>
   <!-- HOME -->
-  <div class="mt-14 mb-16 fade-in" id="HOME">
+  <div class="lg:mt-14 mb-16 fade-in" id="HOME">
     <Card>
-      <div class="p-[8%]">
+      <div class="lg:p-[8%] py-8 px-1">
         <PageTitle
           title="Impulsa tu marca en redes con estrategia, diseño y resultados reales."
         />
         <p
-          class="mt-10 font-light mx-[10%] text-center font-stretch-expanded text-xl text-gray-400"
+          class="mt-10 font-light mx-[10%] text-center font-stretch-expanded lg:text-xl text-xs text-gray-400"
         >
           Somos una agencia creativa especializada en redes sociales para marcas
           personales, empresas e influencers que quieren crecer con propósito.
         </p>
-        <div class="justify-center w-full mt-[8%] flex gap-7">
+        <div
+          class="justify-center w-full mt-[8%] flex lg:flex-row items-center flex-col gap-7"
+        >
           <Button
             title="Conoce nuestros servicios"
             classNames="NAVIGATE_SERVICIOS"
@@ -39,7 +41,7 @@ import SocialMediaIcon from "../components/SocialMediaIcon.astro";
     <PageTitle title="Sobre Nosotros" dark />
     <div class="flex flex-col gap-15 mt-[5%]">
       <Card title="¿Quiénes somos?" dark>
-        <p class="text-white text-center font-thin text-2xl p-[6%]">
+        <p class="text-white text-center font-thin lg:text-2xl p-[6%]">
           En REMA Media creemos que cada marca tiene una historia única que
           merece ser contada. Nacimos para acompañar a empresas, profesionales e
           influencers en su crecimiento digital, creando estrategias auténticas,
@@ -47,26 +49,30 @@ import SocialMediaIcon from "../components/SocialMediaIcon.astro";
         </p>
       </Card>
       <Card title="Nuestro enfoque" dark>
-        <div class="flex divide-x py-[2.5%]">
+        <div
+          class="lg:flex lg:divide-x divide-y lg:divide-y-0 mx-7 lg:mx-0 py-[2.5%]"
+        >
           <h1
-            class="font-black text-white text-3xl py-[3%] px-[5%] text-center font-stretch-expanded"
+            class="font-black text-white lg:text-3xl text-xl lg:py-[3%] py-8 lg:px-[5%] text-center font-stretch-expanded"
           >
             CREATIVIDAD CON PROPÓSITO
           </h1>
           <h1
-            class="font-black text-white text-3xl py-[3%] px-[5%] text-center font-stretch-expanded"
+            class="font-black text-white lg:text-3xl text-xl lg:py-[3%] py-8 lg:px-[5%] text-center font-stretch-expanded"
           >
             CREATIVIDAD CON PROPÓSITO
           </h1>
           <h1
-            class="font-black text-white text-3xl py-[3%] px-[5%] text-center font-stretch-expanded"
+            class="font-black text-white lg:text-3xl text-xl lg:py-[3%] py-8 lg:px-[5%] text-center font-stretch-expanded"
           >
             CREATIVIDAD CON PROPÓSITO
           </h1>
         </div>
       </Card>
       <Card title="Nuestro equipo" dark>
-        <div class="flex p-[4%] justify-between">
+        <div
+          class="flex lg:p-[4%] px-5 py-8 flex-wrap gap-6 lg:justify-between justify-around"
+        >
           <TeamMember
             photo={""}
             name="Hernan Lopez"
@@ -93,14 +99,16 @@ import SocialMediaIcon from "../components/SocialMediaIcon.astro";
   </div>
 
   <!-- SERVICIOS -->
-  <div class="flex items-start my-[5%] flex-col fade-in" id="SERVICIOS">
+  <div class="flex lg:items-start my-[5%] flex-col fade-in" id="SERVICIOS">
     <PageTitle title="Servicios" />
-    <div class="px-[6%]">
-      <p class="text-gray-400 font-thin text-2xl font-stretch-expanded py-[3%]">
+    <div class="lg:px-[6%] px-15">
+      <p
+        class="text-gray-400 font-thin lg:text-2xl font-stretch-expanded lg:py-[3%] py-8"
+      >
         Ofrecemos soluciones integrales de marketing digital y manejo de redes
         sociales adaptadas a cada etapa y objetivo de tu marca.
       </p>
-      <div class="flex justify-between flex-wrap">
+      <div class="flex justify-between flex-wrap gap-8">
         <ServiceItem
           image="https://www.esan.edu.pe/images/blog/20230202/b7Trth.jpg"
           title="Gestión de redes sociales"
@@ -126,20 +134,27 @@ import SocialMediaIcon from "../components/SocialMediaIcon.astro";
   </div>
 
   <!-- SOLUCIONES POR OBJETIVO -->
-  <div class="my-[5%] fade-in" id="SOLUCIONES_POR_OBJETIVO">
-    <div class="px-[25%]">
+  <div
+    class="my-[5%] fade-in lg:border-t-0 border-t-1 lg:pt-0 pt-6"
+    id="SOLUCIONES_POR_OBJETIVO"
+  >
+    <div class="lg:px-[25%] px-20 lg:mb-0 mb-7">
       <PageTitle title="Soluciones por publico objetivo" />
     </div>
     <div class="flex flex-col gap-14">
       <Card title="Para Empresas">
-        <div class="divide-x flex my-[2%] text-gray-400 items-center">
-          <p class="font-thin text-2xl px-[6%] py-[2%] w-[55%]">
+        <div
+          class="lg:divide-x lg:flex lg:my-[2%] my-4 text-center lg:text-start lg:mx-0 mx-6 text-gray-400 items-center"
+        >
+          <p class="font-thin lg:text-2xl px-[6%] py-[2%] lg:w-[55%]">
             Potenciamos tu presencia digital con estrategias claras, contenido
             profesional y campañas diseñadas para generar resultados reales:
             mayor visibilidad, atracción de clientes y posicionamiento de marca.
           </p>
-          <div class="font-thin text-2xl px-[6%] py-[2%] w-[45%]">
-            <span class="font-black text-2xl"> Servicios clave: </span>
+          <div
+            class="font-thin lg:text-2xl text-start px-[6%] py-[2%] lg:w-[45%]"
+          >
+            <span class="font-black"> Servicios clave: </span>
             <ul>
               <li>- Gestión de redes</li>
               <li>- Publicidad segmentada</li>
@@ -150,14 +165,18 @@ import SocialMediaIcon from "../components/SocialMediaIcon.astro";
         </div>
       </Card>
       <Card title="Para Marcas Personales" titleRight>
-        <div class="divide-x flex my-[2%] text-gray-400 items-center">
-          <p class="font-thin text-2xl px-[6%] py-[2%] w-[55%]">
+        <div
+          class="lg:divide-x lg:flex lg:my-[2%] my-4 text-center lg:text-start lg:mx-0 mx-6 text-gray-400 items-center"
+        >
+          <p class="font-thin lg:text-2xl px-[6%] py-[2%] lg:w-[55%]">
             ¿Eres médico, abogado, coach o profesional independiente?
             Construimos tu marca personal con contenido de valor, autoridad
             digital y una imagen coherente que conecta con tu audiencia.
           </p>
-          <div class="font-thin text-2xl px-[6%] py-[2%] w-[45%]">
-            <span class="font-black text-2xl"> Servicios clave: </span>
+          <div
+            class="font-thin lg:text-2xl text-start px-[6%] py-[2%] lg:w-[45%]"
+          >
+            <span class="font-black"> Servicios clave: </span>
             <ul>
               <li>- Branding y tono de voz</li>
               <li>- Contenido educativo y profesional</li>
@@ -168,14 +187,18 @@ import SocialMediaIcon from "../components/SocialMediaIcon.astro";
         </div>
       </Card>
       <Card title="Para Influencers">
-        <div class="divide-x flex my-[2%] text-gray-400 items-center">
-          <p class="font-thin text-2xl px-[6%] py-[2%] w-[55%]">
+        <div
+          class="lg:divide-x lg:flex lg:my-[2%] my-4 text-center lg:text-start lg:mx-0 mx-6 text-gray-400 items-center"
+        >
+          <p class="font-thin lg:text-2xl px-[6%] py-[2%] lg:w-[55%]">
             Te ayudamos a profesionalizar tu perfil, aumentar tu engagement y
             conectar con marcas. Creamos contenido creativo, planificamos tu
             estrategia y te acompañamos en cada paso de tu crecimiento digital.
           </p>
-          <div class="font-thin text-2xl px-[6%] py-[2%] w-[45%]">
-            <span class="font-black text-2xl"> Servicios clave: </span>
+          <div
+            class="font-thin lg:text-2xl text-start px-[6%] py-[2%] lg:w-[45%]"
+          >
+            <span class="font-black"> Servicios clave: </span>
             <ul>
               <li>- Gestión de contenido viral</li>
               <li>- Diseño visual de perfil</li>
@@ -189,23 +212,25 @@ import SocialMediaIcon from "../components/SocialMediaIcon.astro";
   </div>
 
   <!-- CONTACTANOS -->
-  <div class="px-20 fade-in" id="CONTACTO">
-    <div class="rounded-4xl bg-gray-400 flex flex-col items-start pt-10 pb-20">
+  <div class="lg:px-20 px-5 fade-in" id="CONTACTO">
+    <div
+      class="rounded-4xl bg-gray-400 flex flex-col lg:items-start lg:pt-10 pt-5 pb-20"
+    >
       <PageTitle title="Contáctanos" />
-      <div class="px-20 w-full">
-        <p class="font-thin text-xl mt-15">
+      <div class="lg:px-20 px-10 w-full">
+        <p class="font-thin lg:text-xl lg:mt-15 mt-5">
           ¿Listo para llevar tu marca al siguiente nivel?
         </p>
-        <p class="font-thin text-xl">
+        <p class="font-thin lg:text-xl">
           Estamos aquí para ayudarte. <span class="font-black"
             >Escríbenos y agenda tu diagnóstico gratuito.</span
           >
         </p>
-        <p class="font-thin text-xl mt-15">
+        <p class="font-thin lg:text-xl lg:mt-15 mt-5">
           Ingresa los siguientes datos y nos comunicaremos contigo
         </p>
-        <form action="" class="w-full gap-4 flex flex-col mt-15">
-          <div class="flex w-full gap-8">
+        <form action="" class="w-full gap-4 flex flex-col lg:mt-15 mt-5">
+          <div class="lg:flex w-full gap-8">
             <Input label="Nombre" key="name" inputType="text" />
             <Input label="Mail" key="email" inputType="email" />
           </div>
@@ -221,7 +246,7 @@ import SocialMediaIcon from "../components/SocialMediaIcon.astro";
   </div>
 
   <!-- FOOTER -->
-  <p class="text-lg px-20 py-15 fade-in">
+  <p class="lg:text-lg lg:px-20 px-5 lg:py-15 py-10 fade-in">
     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
     nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
     wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
@@ -230,7 +255,7 @@ import SocialMediaIcon from "../components/SocialMediaIcon.astro";
     dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
     dignissim
   </p>
-  <div class="flex gap-4 w-full justify-center mb-20">
+  <div class="flex gap-4 w-full justify-center lg:mb-20 mb-10">
     <SocialMediaIcon icon="facebook" />
     <SocialMediaIcon icon="whatsapp" />
     <SocialMediaIcon icon="instagram" />
