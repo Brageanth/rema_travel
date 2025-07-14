@@ -6,7 +6,7 @@ const { dark, title, titleRight } = Astro.props;
   <div
     class:list={[
       title ? "" : "hidden",
-      dark ? "bg-white" : "bg-black text-white",
+      dark ? "bg-white text-midnight" : "bg-midnight text-white",
       titleRight ? "ml-auto mr-[40px]" : "",
       "lg:px-[3%] px-12 font-black lg:text-2xl py-[1%] rounded-t-[25px] mr-auto ml-auto lg:ml-[20px] w-fit",
     ]}
@@ -16,7 +16,7 @@ const { dark, title, titleRight } = Astro.props;
   <div
     class:list={[
       "border-2",
-      dark ? "border-white" : "border-black",
+      dark ? "border-white" : "border-midnight",
       title ? "rounded-[40px]" : "lg:rounded-[75px] rounded-[50px]",
     ]}
   >

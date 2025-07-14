@@ -21,8 +21,24 @@ export default function ScrollAndLenis() {
       });
     });
 
+    const idGradient = "#SOBRE_NOSOTROS";
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: idGradient,
+          start: "top bottom", // Cuando entra en viewport
+          end: "bottom top", // Cuando sale del viewport
+          scrub: true, // 🔥 Esto sincroniza con el scroll
+        },
+      })
+      .to(idGradient, { backgroundPosition: "0% 0%" })
+      .to(idGradient, { backgroundPosition: "0% 100%" })
+      .to(idGradient, { backgroundPosition: "100% 100%" })
+      .to(idGradient, { backgroundPosition: "100% 0%" });
+
     const lenis = new Lenis({
-      duration: 1.2,
+      duration: 1.3,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     });
 
