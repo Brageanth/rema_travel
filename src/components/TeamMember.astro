@@ -1,12 +1,12 @@
 ---
-const { photo, name, position } = Astro.props;
+const { name, position } = Astro.props;
 ---
 
 <div class="flex flex-col justify-center items-center">
   <img
     alt="name"
-    class="lg:w-[15vw] lg:h-[15vw] w-30 h-30 object-cover rounded-full bg-white"
-    src={photo}
+    class="lg:w-[15vw] lg:h-[15vw] w-30 h-30 object-cover object-top rounded-full bg-white"
+    src={name.toLowerCase().replace(/ /g, "_") + ".png"}
   />
   <span class="text-white font-black lg:text-2xl text-sm lg:mt-4 mt-1"
     >{name}</span

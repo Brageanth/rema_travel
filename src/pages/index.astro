@@ -7,266 +7,257 @@ import PageTitle from "../components/PageTitle.astro";
 import ServiceItem from "../components/ServiceItem.astro";
 import Input from "../components/Input.astro";
 import SocialMediaIcon from "../components/SocialMediaIcon.astro";
+import Header from "../components/Header.astro";
 ---
 
 <Layout>
-  <!-- HOME -->
-  <div class="lg:mt-14 mb-16 fade-in" id="HOME">
-    <Card>
-      <div class="lg:p-[8%] py-8 px-1">
-        <PageTitle
-          title="Impulsa tu marca en redes con estrategia, diseño y resultados reales."
-        />
-        <p
-          class="mt-10 font-light mx-[10%] text-center font-stretch-expanded lg:text-xl text-xs text-travel-gray"
-        >
-          Somos una agencia creativa especializada en redes sociales para marcas
-          personales, empresas e influencers que quieren crecer con propósito.
-        </p>
-        <div
-          class="justify-center w-full mt-[8%] flex lg:flex-row items-center flex-col gap-7"
-        >
-          <Button
-            title="Conoce nuestros servicios"
-            classNames="NAVIGATE_SERVICIOS"
-          />
-          <Button title="Agenda tu asesoría gratuita" />
-        </div>
-      </div>
-    </Card>
-  </div>
-
-  <!-- SOBRE NOSOTROS -->
   <div
-    class="bg-radial-[at_-10%_-30%] bg-[length:200%_200%] bg-[position:0%_0%] from-white via-40% via-midnight to-travel-dark to-70% py-[5%] fade-in"
-    id="SOBRE_NOSOTROS"
+    class="bg-[url(/background.png)] bg-local bg-clip-border bg-origin-border bg-top bg-repeat-y bg-size-[101%]"
   >
-    <PageTitle title="Sobre Nosotros" dark />
-    <div class="flex flex-col gap-15 mt-[5%]">
-      <Card title="¿Quiénes somos?" dark>
-        <p class="text-white text-center lg:text-2xl p-[6%]">
-          En REMA Media creemos que cada marca tiene una historia única que
-          merece ser contada. Nacimos para acompañar a empresas, profesionales e
-          influencers en su crecimiento digital, creando estrategias auténticas,
-          contenido impactante y resultados medibles.
-        </p>
-      </Card>
-      <Card title="Nuestro enfoque" dark>
-        <div
-          class="lg:flex lg:divide-x divide-y lg:divide-y-0 mx-7 lg:mx-0 py-[2.5%]"
-        >
-          <h3
-            class="font-black text-white lg:text-3xl text-xl lg:py-[3%] py-8 lg:px-[5%] text-center font-stretch-expanded"
+    <Header />
+    <!-- HOME -->
+    <div class="lg:mt-14 mb-16 fade-in" id="HOME">
+      <Card dark>
+        <div class="lg:p-[8%] py-8 px-1">
+          <PageTitle
+            dark
+            title="Impulsa tu marca en redes con estrategia, diseño y resultados reales."
+          />
+          <p
+            class="mt-5 font-light mx-[10%] text-center font-stretch-expanded lg:text-xl text-xs text-white"
           >
-            CREATIVIDAD CON PROPÓSITO
-          </h3>
-          <h3
-            class="font-black text-white lg:text-3xl text-xl lg:py-[3%] py-8 lg:px-[5%] text-center font-stretch-expanded"
+            Somos una agencia creativa especializada en redes sociales para
+            marcas personales, empresas e influencers que quieren crecer con
+            propósito.
+          </p>
+          <div
+            class="justify-center w-full mt-[8%] flex lg:flex-row items-center flex-col gap-7"
           >
-            CREATIVIDAD CON PROPÓSITO
-          </h3>
-          <h3
-            class="font-black text-white lg:text-3xl text-xl lg:py-[3%] py-8 lg:px-[5%] text-center font-stretch-expanded"
-          >
-            CREATIVIDAD CON PROPÓSITO
-          </h3>
-        </div>
-      </Card>
-      <Card title="Nuestro equipo" dark>
-        <div
-          class="flex lg:p-[4%] px-5 py-8 flex-wrap gap-6 lg:justify-between justify-around"
-        >
-          <TeamMember
-            photo={""}
-            name="Hernan Lopez"
-            position="Cargo de la empresa"
-          />
-          <TeamMember
-            photo={""}
-            name="Hernan Lopez"
-            position="Cargo de la empresa"
-          />
-          <TeamMember
-            photo={""}
-            name="Hernan Lopez"
-            position="Cargo de la empresa"
-          />
-          <TeamMember
-            photo={""}
-            name="Hernan Lopez"
-            position="Cargo de la empresa"
-          />
+            <Button
+              title="Conoce nuestros servicios"
+              classNames="NAVIGATE_SERVICIOS"
+            />
+            <Button title="Agenda tu asesoría gratuita" />
+          </div>
         </div>
       </Card>
     </div>
-  </div>
 
-  <!-- SERVICIOS -->
-  <div class="flex lg:items-start my-[5%] flex-col fade-in" id="SERVICIOS">
-    <PageTitle title="Servicios" />
-    <div class="lg:px-[6%] px-15">
-      <p
-        class="text-travel-gray lg:text-2xl font-stretch-expanded lg:py-[3%] py-8"
+    <!-- SOBRE NOSOTROS -->
+    <div class="py-[5%] fade-in" id="SOBRE_NOSOTROS">
+      <PageTitle title="Sobre Nosotros" dark />
+      <div class="flex flex-col gap-15 mt-[5%]">
+        <Card title="¿Quiénes somos?" dark>
+          <p class="text-white text-center lg:text-2xl p-[8%]">
+            En REMA Media creemos que cada marca tiene una historia única que
+            merece ser contada. Nacimos para acompañar a empresas, profesionales
+            e influencers en su crecimiento digital, creando estrategias
+            auténticas, contenido impactante y resultados medibles.
+          </p>
+        </Card>
+        <Card title="Nuestro enfoque" dark>
+          <div
+            class="lg:flex lg:divide-x divide-y lg:divide-y-0 mx-7 lg:mx-0 py-[2.5%]"
+          >
+            <h3
+              class="font-black text-white lg:text-3xl text-xl lg:py-[3%] py-8 lg:px-[5%] text-center font-stretch-expanded"
+            >
+              CREATIVIDAD CON PROPÓSITO
+            </h3>
+            <h3
+              class="font-black text-white lg:text-3xl text-xl lg:py-[3%] py-8 lg:px-[5%] text-center font-stretch-expanded"
+            >
+              CREATIVIDAD CON PROPÓSITO
+            </h3>
+            <h3
+              class="font-black text-white lg:text-3xl text-xl lg:py-[3%] py-8 lg:px-[5%] text-center font-stretch-expanded"
+            >
+              CREATIVIDAD CON PROPÓSITO
+            </h3>
+          </div>
+        </Card>
+        <Card title="Nuestro equipo" dark>
+          <div
+            class="flex lg:p-[4%] px-5 py-8 flex-wrap gap-6 lg:justify-between justify-around"
+          >
+            <TeamMember name="Esteban Contreras" position="CEO" />
+            <TeamMember name="Eliana Ramírez" position="Cargo de la empresa" />
+            <TeamMember name="Franelys Chavez" position="Cargo de la empresa" />
+            <TeamMember name="Oscar Mendoza" position="Cargo de la empresa" />
+          </div>
+        </Card>
+      </div>
+    </div>
+
+    <!-- SERVICIOS -->
+    <div class="flex lg:items-start my-[5%] flex-col fade-in" id="SERVICIOS">
+      <PageTitle title="Servicios" dark />
+      <div class="lg:px-[6%] px-15">
+        <p
+          class="text-white lg:text-2xl text-center font-stretch-expanded lg:py-[3%] py-8"
+        >
+          Ofrecemos soluciones integrales de marketing digital y manejo de redes
+          sociales adaptadas a cada etapa y objetivo de tu marca.
+        </p>
+        <div class="flex justify-between flex-wrap gap-8">
+          <ServiceItem
+            image="/gestion_redes_sociales.jpg"
+            title="Gestión de redes sociales"
+            description="Planeación, ejecución y análisis para redes como Instagram, Facebook, TikTok y más."
+          />
+          <ServiceItem
+            image="/publicidad_digital.jpg"
+            title="Creación de contenido"
+            description="Diseño gráfico, fotografía, reels, animaciones y contenido adaptado a tu audiencia."
+          />
+          <ServiceItem
+            image="/creacion_contenido.jpg"
+            title="Publicidad digital"
+            description="Campañas efectivas en Meta Ads (Facebook/Instagram) y Google Ads con segmentación estratégica."
+          />
+          <ServiceItem
+            image="asesorias_cursos.jpg"
+            title="Asesorías y cursos"
+            description="Capacitaciones para marcas que quieren tomar el control de sus redes con herramientas reales."
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- SOLUCIONES POR OBJETIVO -->
+    <div class="my-[5%] fade-in lg:pt-0 pt-3" id="SOLUCIONES_POR_OBJETIVO">
+      <div
+        class="lg:px-[25%] mx-5 px-15 lg:pt-0 pt-6 lg:mb-0 mb-7 lg:border-t-0 border-midnight border-t-1"
       >
-        Ofrecemos soluciones integrales de marketing digital y manejo de redes
-        sociales adaptadas a cada etapa y objetivo de tu marca.
-      </p>
-      <div class="flex justify-between flex-wrap gap-8">
-        <ServiceItem
-          image="/gestion_redes_sociales.jpg"
-          title="Gestión de redes sociales"
-          description="Planeación, ejecución y análisis para redes como Instagram, Facebook, TikTok y más."
-        />
-        <ServiceItem
-          image="/publicidad_digital.jpg"
-          title="Creación de contenido"
-          description="Diseño gráfico, fotografía, reels, animaciones y contenido adaptado a tu audiencia."
-        />
-        <ServiceItem
-          image="/creacion_contenido.jpg"
-          title="Publicidad digital"
-          description="Campañas efectivas en Meta Ads (Facebook/Instagram) y Google Ads con segmentación estratégica."
-        />
-        <ServiceItem
-          image="asesorias_cursos.jpg"
-          title="Asesorías y cursos"
-          description="Capacitaciones para marcas que quieren tomar el control de sus redes con herramientas reales."
-        />
+        <PageTitle title="Soluciones por publico objetivo" />
+      </div>
+      <div class="flex flex-col gap-14">
+        <Card title="Para Empresas">
+          <div
+            class="lg:divide-x lg:flex lg:my-[2%] my-4 text-center lg:text-start lg:mx-0 mx-6 items-center"
+          >
+            <p class="text-travel-gray lg:text-2xl px-[6%] py-[2%] lg:w-[55%]">
+              Potenciamos tu presencia digital con estrategias claras, contenido
+              profesional y campañas diseñadas para generar resultados reales:
+              mayor visibilidad, atracción de clientes y posicionamiento de
+              marca.
+            </p>
+            <div
+              class="text-travel-gray lg:text-2xl text-start px-[6%] py-[2%] lg:w-[45%]"
+            >
+              <span class="font-black"> Servicios clave: </span>
+              <ul>
+                <li>- Gestión de redes</li>
+                <li>- Publicidad segmentada</li>
+                <li>- Diseño de contenido gráfico y audiovisual</li>
+                <li>- Informes y análisis de rendimiento</li>
+              </ul>
+            </div>
+          </div>
+        </Card>
+        <Card title="Para Marcas Personales" titleRight>
+          <div
+            class="lg:divide-x lg:flex lg:my-[2%] my-4 text-center lg:text-start lg:mx-0 mx-6 items-center"
+          >
+            <p class="text-travel-gray lg:text-2xl px-[6%] py-[2%] lg:w-[55%]">
+              ¿Eres médico, abogado, coach o profesional independiente?
+              Construimos tu marca personal con contenido de valor, autoridad
+              digital y una imagen coherente que conecta con tu audiencia.
+            </p>
+            <div
+              class="text-travel-gray lg:text-2xl text-start px-[6%] py-[2%] lg:w-[45%]"
+            >
+              <span class="font-black"> Servicios clave: </span>
+              <ul>
+                <li>- Branding y tono de voz</li>
+                <li>- Contenido educativo y profesional</li>
+                <li>- Edición y diseño profesional</li>
+                <li>- Diseño de feed y estrategia de crecimiento</li>
+              </ul>
+            </div>
+          </div>
+        </Card>
+        <Card title="Para Influencers">
+          <div
+            class="lg:divide-x lg:flex lg:my-[2%] my-4 text-center lg:text-start lg:mx-0 mx-6 items-center"
+          >
+            <p class="text-travel-gray lg:text-2xl px-[6%] py-[2%] lg:w-[55%]">
+              Te ayudamos a profesionalizar tu perfil, aumentar tu engagement y
+              conectar con marcas. Creamos contenido creativo, planificamos tu
+              estrategia y te acompañamos en cada paso de tu crecimiento
+              digital.
+            </p>
+            <div
+              class="text-travel-gray lg:text-2xl text-start px-[6%] py-[2%] lg:w-[45%]"
+            >
+              <span class="font-black"> Servicios clave: </span>
+              <ul>
+                <li>- Gestión de contenido viral</li>
+                <li>- Diseño visual de perfil</li>
+                <li>- Media kit y asesoría de marca</li>
+                <li>- Alianzas y colaboraciones</li>
+              </ul>
+            </div>
+          </div>
+        </Card>
       </div>
     </div>
-  </div>
 
-  <!-- SOLUCIONES POR OBJETIVO -->
-  <div class="my-[5%] fade-in lg:pt-0 pt-3" id="SOLUCIONES_POR_OBJETIVO">
-    <div
-      class="lg:px-[25%] mx-5 px-15 lg:pt-0 pt-6 lg:mb-0 mb-7 lg:border-t-0 border-midnight border-t-1"
-    >
-      <PageTitle title="Soluciones por publico objetivo" />
-    </div>
-    <div class="flex flex-col gap-14">
-      <Card title="Para Empresas">
-        <div
-          class="lg:divide-x lg:flex lg:my-[2%] my-4 text-center lg:text-start lg:mx-0 mx-6 items-center"
-        >
-          <p class="text-travel-gray lg:text-2xl px-[6%] py-[2%] lg:w-[55%]">
-            Potenciamos tu presencia digital con estrategias claras, contenido
-            profesional y campañas diseñadas para generar resultados reales:
-            mayor visibilidad, atracción de clientes y posicionamiento de marca.
+    <!-- CONTACTANOS -->
+    <div class="lg:px-20 px-5 fade-in" id="CONTACTO">
+      <div
+        class="rounded-4xl bg-travel-sky flex flex-col lg:items-start lg:pt-10 pt-5 pb-20"
+      >
+        <img
+          src="/decoration.png"
+          alt="decoration"
+          class="lg:w-40 w-20 my-3 mx-auto"
+        />
+        <PageTitle title="Contáctanos" />
+        <div class="lg:px-20 px-10 w-full">
+          <p class="text-midnight lg:text-xl lg:mt-15 mt-5">
+            ¿Listo para llevar tu marca al siguiente nivel?
           </p>
-          <div
-            class="text-travel-gray lg:text-2xl text-start px-[6%] py-[2%] lg:w-[45%]"
-          >
-            <span class="font-black"> Servicios clave: </span>
-            <ul>
-              <li>- Gestión de redes</li>
-              <li>- Publicidad segmentada</li>
-              <li>- Diseño de contenido gráfico y audiovisual</li>
-              <li>- Informes y análisis de rendimiento</li>
-            </ul>
-          </div>
-        </div>
-      </Card>
-      <Card title="Para Marcas Personales" titleRight>
-        <div
-          class="lg:divide-x lg:flex lg:my-[2%] my-4 text-center lg:text-start lg:mx-0 mx-6 items-center"
-        >
-          <p class="text-travel-gray lg:text-2xl px-[6%] py-[2%] lg:w-[55%]">
-            ¿Eres médico, abogado, coach o profesional independiente?
-            Construimos tu marca personal con contenido de valor, autoridad
-            digital y una imagen coherente que conecta con tu audiencia.
+          <p class="text-midnight lg:text-xl">
+            Estamos aquí para ayudarte. <span class="font-black"
+              >Escríbenos y agenda tu diagnóstico gratuito.</span
+            >
           </p>
-          <div
-            class="text-travel-gray lg:text-2xl text-start px-[6%] py-[2%] lg:w-[45%]"
-          >
-            <span class="font-black"> Servicios clave: </span>
-            <ul>
-              <li>- Branding y tono de voz</li>
-              <li>- Contenido educativo y profesional</li>
-              <li>- Edición y diseño profesional</li>
-              <li>- Diseño de feed y estrategia de crecimiento</li>
-            </ul>
-          </div>
-        </div>
-      </Card>
-      <Card title="Para Influencers">
-        <div
-          class="lg:divide-x lg:flex lg:my-[2%] my-4 text-center lg:text-start lg:mx-0 mx-6 items-center"
-        >
-          <p class="text-travel-gray lg:text-2xl px-[6%] py-[2%] lg:w-[55%]">
-            Te ayudamos a profesionalizar tu perfil, aumentar tu engagement y
-            conectar con marcas. Creamos contenido creativo, planificamos tu
-            estrategia y te acompañamos en cada paso de tu crecimiento digital.
+          <p class="text-midnight lg:text-xl lg:mt-15 mt-5">
+            Ingresa los siguientes datos y nos comunicaremos contigo
           </p>
-          <div
-            class="text-travel-gray lg:text-2xl text-start px-[6%] py-[2%] lg:w-[45%]"
-          >
-            <span class="font-black"> Servicios clave: </span>
-            <ul>
-              <li>- Gestión de contenido viral</li>
-              <li>- Diseño visual de perfil</li>
-              <li>- Media kit y asesoría de marca</li>
-              <li>- Alianzas y colaboraciones</li>
-            </ul>
-          </div>
+          <form action="" class="w-full gap-4 flex flex-col lg:mt-15 mt-5">
+            <div class="lg:flex w-full gap-8">
+              <Input label="Nombre" key="name" inputType="text" />
+              <Input label="Mail" key="email" inputType="email" />
+            </div>
+            <Input
+              label="¿Cuál servicio te interesa?"
+              key="service"
+              inputType="text"
+            />
+            <Input label="Mensaje" key="message" inputType="textarea" />
+          </form>
         </div>
-      </Card>
-    </div>
-  </div>
-
-  <!-- CONTACTANOS -->
-  <div class="lg:px-20 px-5 fade-in" id="CONTACTO">
-    <div
-      class="rounded-4xl bg-travel-sky flex flex-col lg:items-start lg:pt-10 pt-5 pb-20"
-    >
-      <img
-        src="/decoration.png"
-        alt="decoration"
-        class="lg:w-40 w-20 my-3 mx-auto"
-      />
-      <PageTitle title="Contáctanos" />
-      <div class="lg:px-20 px-10 w-full">
-        <p class="text-midnight lg:text-xl lg:mt-15 mt-5">
-          ¿Listo para llevar tu marca al siguiente nivel?
-        </p>
-        <p class="text-midnight lg:text-xl">
-          Estamos aquí para ayudarte. <span class="font-black"
-            >Escríbenos y agenda tu diagnóstico gratuito.</span
-          >
-        </p>
-        <p class="text-midnight lg:text-xl lg:mt-15 mt-5">
-          Ingresa los siguientes datos y nos comunicaremos contigo
-        </p>
-        <form action="" class="w-full gap-4 flex flex-col lg:mt-15 mt-5">
-          <div class="lg:flex w-full gap-8">
-            <Input label="Nombre" key="name" inputType="text" />
-            <Input label="Mail" key="email" inputType="email" />
-          </div>
-          <Input
-            label="¿Cuál servicio te interesa?"
-            key="service"
-            inputType="text"
-          />
-          <Input label="Mensaje" key="message" inputType="textarea" />
-        </form>
       </div>
     </div>
-  </div>
 
-  <!-- FOOTER -->
-  <p
-    class="lg:text-lg lg:px-20 px-5 lg:py-15 py-10 fade-in text-sm text-travel-gray"
-  >
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-    wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-    lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-    dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
-    dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
-    dignissim
-  </p>
-  <div class="flex gap-4 w-full justify-center lg:mb-20 mb-10">
-    <SocialMediaIcon icon="facebook" />
-    <SocialMediaIcon icon="whatsapp" />
-    <SocialMediaIcon icon="instagram" />
+    <!-- FOOTER -->
+    <p
+      class="lg:text-lg lg:px-20 px-5 lg:py-15 py-10 fade-in text-sm text-travel-gray"
+    >
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+      nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
+      wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+      lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
+      iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel
+      illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto
+      odio dignissim
+    </p>
+    <div class="flex gap-4 w-full justify-center lg:mb-20 mb-10">
+      <SocialMediaIcon icon="facebook" />
+      <SocialMediaIcon icon="whatsapp" />
+      <SocialMediaIcon icon="instagram" />
+    </div>
   </div>
 </Layout>

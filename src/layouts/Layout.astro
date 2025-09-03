@@ -1,6 +1,5 @@
 ---
 import "../styles/global.css";
-import Header from "../components/Header.astro";
 import ClientEffects from "../components/ClientEffects.jsx";
 ---
 
@@ -24,7 +23,6 @@ import ClientEffects from "../components/ClientEffects.jsx";
   </head>
   <body>
     <ClientEffects client:only="react" />
-    <Header />
     <slot />
   </body>
 </html>
