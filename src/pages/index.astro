@@ -4,13 +4,14 @@ import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
 import TeamMember from "../components/TeamMember.astro";
 import PageTitle from "../components/PageTitle.astro";
-import ServiceItem from "../components/ServiceItem.astro";
+import FeaturedDestinationItem from "../components/FeaturedDestinationItem.astro";
 import Input from "../components/Input.astro";
 import SocialMediaIcon from "../components/SocialMediaIcon.astro";
 import Header from "../components/Header.astro";
 import TitleArrow from "../assets/title_arrow.png";
 import TitleArrow2 from "../assets/title_arrow_2.png";
 import { Image } from "astro:assets";
+import HomeVideo from "../assets/video.mp4";
 ---
 
 <Layout>
@@ -19,82 +20,77 @@ import { Image } from "astro:assets";
   >
     <Header />
     <!-- HOME -->
-    <div class="lg:mt-14 mb-16 fade-in" id="HOME">
+    <div class="lg:mt-14 mb-8 fade-in" id="HOME">
       <Card dark>
-        <div class="lg:p-[8%] py-8 px-1">
+        <div class="lg:p-[8%] py-9 px-3">
           <PageTitle
-            dark
-            title="Impulsa tu marca en redes con estrategia, diseño y resultados reales."
+            title="Tu historia favorita aún no se ha escrito… empieza en el próximo destino."
           />
           <p
             class="mt-5 font-light mx-[10%] text-center font-stretch-expanded lg:text-xl text-xs text-white"
           >
-            Somos una agencia creativa especializada en redes sociales para
-            marcas personales, empresas e influencers que quieren crecer con
-            propósito.
+            Descubre Colombia y Europa con experiencias únicas que te
+            transforman. Con REMA Travel, tu próxima aventura comienza hoy.
           </p>
-          <div
-            class="justify-center w-full mt-[8%] flex lg:flex-row items-center flex-col gap-7"
-          >
-            <Button
-              title="Conoce nuestros servicios"
-              classNames="NAVIGATE_SERVICIOS"
-            />
-            <Button title="Agenda tu asesoría gratuita" />
-          </div>
         </div>
       </Card>
+      <div class="mx-[6%] mt-10 rounded-2xl overflow-hidden">
+        <video autoplay muted loop controls
+          ><source src={HomeVideo} type="video/mp4" /></video
+        >
+      </div>
     </div>
 
-    <!-- SOBRE NOSOTROS -->
-    <div class="py-[5%] fade-in" id="SOBRE_NOSOTROS">
-      <PageTitle title="Sobre Nosotros" dark />
-      <div class="flex flex-col gap-15 mt-[5%]">
-        <Card title="¿Quiénes somos?" dark>
-          <p class="text-white text-center lg:text-2xl p-[8%]">
-            En REMA Media creemos que cada marca tiene una historia única que
-            merece ser contada. Nacimos para acompañar a empresas, profesionales
-            e influencers en su crecimiento digital, creando estrategias
-            auténticas, contenido impactante y resultados medibles.
-          </p>
-        </Card>
-        <Card title="Nuestro enfoque" dark>
-          <div
-            class="lg:flex lg:divide-x divide-y lg:divide-y-0 mx-7 lg:mx-0 py-[2.5%]"
-          >
-            <h3
-              class="font-black text-white lg:text-3xl text-xl lg:py-[3%] py-8 lg:px-[5%] text-center font-stretch-expanded"
-            >
-              CREATIVIDAD CON PROPÓSITO
-            </h3>
-            <h3
-              class="font-black text-white lg:text-3xl text-xl lg:py-[3%] py-8 lg:px-[5%] text-center font-stretch-expanded"
-            >
-              CREATIVIDAD CON PROPÓSITO
-            </h3>
-            <h3
-              class="font-black text-white lg:text-3xl text-xl lg:py-[3%] py-8 lg:px-[5%] text-center font-stretch-expanded"
-            >
-              CREATIVIDAD CON PROPÓSITO
-            </h3>
-          </div>
-        </Card>
-        <Card title="Nuestro equipo" dark>
-          <div
-            class="flex lg:p-[4%] px-5 py-8 flex-wrap gap-6 lg:justify-between justify-around"
-          >
-            <TeamMember name="Esteban Contreras" position="CEO" />
-            <TeamMember name="Eliana Ramírez" position="Cargo de la empresa" />
-            <TeamMember name="Franelys Chavez" position="Cargo de la empresa" />
-            <TeamMember name="Oscar Mendoza" position="Cargo de la empresa" />
-          </div>
-        </Card>
+    <!-- DESTINOS DESTACADOS -->
+    <div class="py-[5%] fade-in overflow-hidden" id="DESTINOS_DESTACADOS">
+      <Image src={TitleArrow} alt="Title arrow" class="lg:w-19/20 w-19/20" } />
+      <PageTitle title="Destinos Destacados" dark />
+      <div class="flex flex-col gap-15 mt-[10%]">
+        <FeaturedDestinationItem
+          title="Colombia"
+          destinations={[
+            {
+              title: "Caribe",
+              destinations: "Cartagena, San Andrés, Santa Marta",
+            },
+            {
+              title: "Naturaleza",
+              destinations: "Eje Cafetero, Amazonas, Caño Cristales",
+            },
+            {
+              title: "Cultura",
+              destinations: "Bogotá, Medellín, Zipaquirá",
+            },
+          ]}
+        />
+        <FeaturedDestinationItem
+          title="Inglaterra"
+          destinations={[
+            {
+              title: "Costas",
+              destinations: "Brighton, Cornwall, Bournemouth",
+            },
+            {
+              title: "Naturaleza",
+              destinations: "Lake District, Peak District, New Forest",
+            },
+            {
+              title: "Cultura",
+              destinations: "London, Oxford, Stratford-upon-Avon",
+            },
+          ]}
+        />
       </div>
+      <Image
+        src={TitleArrow}
+        alt="Title arrow"
+        class="lg:w-19/20 ml-4 rotate-180"
+        }
+      />
     </div>
 
     <!-- SERVICIOS -->
     <div class="flex lg:items-start my-[5%] flex-col fade-in" id="SERVICIOS">
-      <Image src={TitleArrow} alt="Title arrow" class="lg:w-19/20" } />
       <PageTitle title="Servicios" dark />
       <div class="lg:px-[6%] px-15">
         <p
@@ -103,28 +99,7 @@ import { Image } from "astro:assets";
           Ofrecemos soluciones integrales de marketing digital y manejo de redes
           sociales adaptadas a cada etapa y objetivo de tu marca.
         </p>
-        <div class="flex justify-between flex-wrap gap-8">
-          <ServiceItem
-            image="/gestion_redes_sociales.png"
-            title="Gestión de redes sociales"
-            description="Planeación, ejecución y análisis para redes como Instagram, Facebook, TikTok y más."
-          />
-          <ServiceItem
-            image="/publicidad_digital.png"
-            title="Creación de contenido"
-            description="Diseño gráfico, fotografía, reels, animaciones y contenido adaptado a tu audiencia."
-          />
-          <ServiceItem
-            image="/creacion_contenido.png"
-            title="Publicidad digital"
-            description="Campañas efectivas en Meta Ads (Facebook/Instagram) y Google Ads con segmentación estratégica."
-          />
-          <ServiceItem
-            image="/asesorias_cursos.png"
-            title="Asesorías y cursos"
-            description="Capacitaciones para marcas que quieren tomar el control de sus redes con herramientas reales."
-          />
-        </div>
+        <div class="flex justify-between flex-wrap gap-8"></div>
       </div>
     </div>
 

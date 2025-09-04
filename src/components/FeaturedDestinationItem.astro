@@ -1,0 +1,26 @@
+---
+const { title, destinations } = Astro.props;
+---
+
+<div class="lg:w-[45%] px-20 w-full flex flex-col items-center">
+  <img
+    src={"/" + title.toLowerCase() + ".png"}
+    alt={title}
+    class="rounded-3xl object-cover lg:h-[60%] h-45"
+  />
+  <span
+    class="leading-4 lg:leading-7 lg:mx-[27%] mx-20 text-white font-black lg:text-3xl lg:mt-4 mt-7 bg-midnight py-2 w-full rounded-full text-center"
+    >{title}</span
+  >
+  <ul class="mt-2 list-disc text-white text-sm mt-5">
+    {
+      destinations.map(
+        (destination: { title: string; destinations: string }) => (
+          <li>
+            <b>{destination.title}</b>: {destination.destinations}
+          </li>
+        ),
+      )
+    }
+  </ul>
+</div>
