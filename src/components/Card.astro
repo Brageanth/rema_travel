@@ -2,7 +2,7 @@
 const { dark, title, titleRight } = Astro.props;
 ---
 
-<div class="px-[6%]">
+<div class="px-[6%] flex flex-col">
   <div
     class:list={[
       title ? "" : "hidden",
@@ -16,9 +16,7 @@ const { dark, title, titleRight } = Astro.props;
   <div
     class:list={[
       "border-1",
-      dark
-        ? "border-white"
-        : "border-none bg-linear-135 from-media-sky-blue/80 from-5% to-media-sky-blue/0",
+      dark ? "border-white" : "border-white",
       title ? "rounded-[40px]" : "lg:rounded-[75px] rounded-[50px]",
     ]}
   >
