@@ -21,7 +21,7 @@ export default function ScrollAndLenis() {
       });
     });
 
-    const idGradient = "#SOBRE_NOSOTROS";
+    const idGradient = "#DESTINOS_DESTACADOS";
 
     gsap
       .timeline({
@@ -55,17 +55,6 @@ export default function ScrollAndLenis() {
         if (target) lenis.scrollTo(target);
       });
     });
-
-    console.log(document.getElementsByClassName("NAVIGATE_SERVICIOS"));
-
-    const navigateToServicesItems =
-      document.getElementsByClassName("NAVIGATE_SERVICIOS");
-    for (let btn of navigateToServicesItems) {
-      btn.addEventListener("click", (e) => {
-        const target = document.getElementById("SERVICIOS");
-        if (target) lenis.scrollTo(target);
-      });
-    }
   }, []);
 
   return null;

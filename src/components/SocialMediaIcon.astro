@@ -18,9 +18,11 @@ switch (icon) {
 }
 ---
 
-<div
+<a
+  href={icon === "whatsapp" ? "https://wa.me/573145775189" : "https://www.instagram.com/rema_travel?igsh=ZG1lcWhlYTJiOXMy&utm_source=web"}
   class="rounded-full bg-white/20 text-white p-2 cursor-pointer hover:shadow-xl transition-shadow duration-350 ease-in-out"
+  target="_blank"
 >
   <Icon class="lg:flex hidden" width={30} height={30} fill="white" />
   <Icon class="lg:hidden" width={20} height={20} fill="white" />
-</div>
+</a>
